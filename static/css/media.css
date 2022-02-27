@@ -7,6 +7,9 @@
     .wrapper-2 .card-saqr-55 {
         width: 100%;
     }
+    .main {
+        min-height: 0vh;
+    }
   
   }
 
