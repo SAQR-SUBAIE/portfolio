@@ -21,7 +21,7 @@ user_1();
 //   }
 
 //   my team
-  
+
 function closeNav() {
     document.getElementById("menu-slide").style.width = "0%";
   }
@@ -34,7 +34,7 @@ function closeNav() {
                   log: false,
               });
               document.getElementById("avatar-1").src = user.avatar.url;
-              document.getElementById("username-1").innerHTML = user.tag
+              document.getElementById("username-1").innerHTML = user.tag;
           }
   async function user_2() {
               let user = await DiscordFetcher("277669327602188288", {
@@ -48,7 +48,7 @@ function closeNav() {
               document.getElementById("username-2").innerHTML = user.tag
           }
 async function user_3() {
-              let user = await DiscordFetcher("532696546462924820", {
+              let user = await DiscordFetcher("750376850768789534", {
                   dynamic: true,
                   size: 1024,
                   format: "gif",
@@ -78,7 +78,7 @@ async function user_5() {
                   log: false,
               });
               document.getElementById("avatar-5").src = user.avatar.url;
-              document.getElementById("username-5").innerHTML = user.tag
+              document.getElementById("username-5").innerHTML = user.tag;
           }
 async function user_6() {
               let user = await DiscordFetcher("713387916054757437", {
@@ -100,7 +100,7 @@ async function user_7() {
                   log: false,
               });
               document.getElementById("avatar-7").src = user.avatar.url;
-              document.getElementById("username-7").innerHTML = user.tag
+              document.getElementById("username-7").innerHTML = user.tag;
           }
   user_1();
   user_2();

@@ -12,4 +12,4 @@ app.register_blueprint(views.errors)
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=3939)
+    app.run(debug=True, port=5003)
