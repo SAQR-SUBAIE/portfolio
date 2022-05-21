@@ -1,0 +1,66 @@
+const express = require('express')
+const dotenv = require('dotenv');
+const app = express()
+const path = require('path')
+dotenv.config();
+
+const print = console.log
+const PORT = process.env.PORT || 5000;
+const GITHUB_ID = process.env.GITHUB_ID || ('GITHUB_ID ❌');
+const TWITTER_ID = process.env.TWITTER_ID || ('TWITTER_ID ❌');
+
+// views engine setup
+app.set('view engine','ejs')
+app.set('views', path.join(__dirname, '/views'));
+
+// Serve static files from /public
+let publicPath = path.join(__dirname, '/public')
+app.use(express.static(publicPath));
+
+// Routes
+app.get('/', async function(req, res, next) {
+    res.render(
+		'index', { 
+			mytitle: "SAQR SUBAIE - portfolio",
+            myimage: "./image/avatar.gif"
+		}
+	);
+})
+
+app.get('/:id', function(req, res) {
+    console.log(req.params);
+    const id = req.params.id;
+    res.render('404', {
+            mytitle: "SAQR SUBAIE - error-404",
+            myimage: "./image/error-404.png",
+            r404: `${id}`
+        }
+    );
+});
+
+
+
+app.get('/gitHub', (req, res) => {
+    res.redirect(`https://github.com/${GITHUB_ID}/`);
+});
+
+
+app.get('/twitter', function(req, res, next) {
+    res.redirect(`https://twitter.com/${TWITTER_ID}/`)
+});
+
+
+
+
+
+
+
+app.listen(PORT, function() {
+    print(`------------------------------------------------------------`);
+    console.log(`Example app listening on http://localhost:${PORT}/ !`)
+    console.log(`WebSite Bot 4kr_bot online https://http://saqr-subaie.com/ !`)
+    print(`------------------------------------------------------------`);
+    print(`gitHub : ${GITHUB_ID}`)
+    print(`twitter : ${TWITTER_ID}`)
+    print(`------------------------------------------------------------`);
+});
