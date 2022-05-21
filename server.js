@@ -22,7 +22,7 @@ app.get('/', async function(req, res, next) {
     res.render(
 		'index', { 
 			mytitle: "SAQR SUBAIE - portfolio",
-            myimage: "./image/avatar.gif"
+            myimage: "https://media.discordapp.net/attachments/880948826201014323/977592923073949757/coding.png"
 		}
 	);
 })
@@ -32,7 +32,7 @@ app.get('/:id', function(req, res) {
     const id = req.params.id;
     res.render('404', {
             mytitle: "SAQR SUBAIE - error-404",
-            myimage: "./image/error-404.png",
+            myimage: "https://media.discordapp.net/attachments/880948826201014323/977593463715549255/error.png",
             r404: `${id}`
         }
     );

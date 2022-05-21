@@ -90,7 +90,14 @@ img {
 
 
 
-
+@media (min-width: 320px) {
+    .m-3 {
+        margin: .3rem!important;
+    }
+    .btn {
+        padding: .200rem .100rem;
+    }
+}
 
 
 
